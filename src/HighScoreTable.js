@@ -8,8 +8,8 @@ const HighScoreTable = (props) => {
       <div className="entries">
         {props.scores
           .sort((playerA, playerB) => playerB.s - playerA.s)
-          .map((score) => (
-            <PlayerScore name={score.n} score={score.s} />
+          .map((score, index) => (
+            <PlayerScore key={index} name={score.n} score={score.s} />
           ))}
       </div>
     </div>

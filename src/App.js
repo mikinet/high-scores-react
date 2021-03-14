@@ -1,6 +1,5 @@
 import React from "react";
 import allCountryScores from "./scores";
-import ScoreCard from "./HighScoreTable";
 import HighScoreTable from "./HighScoreTable";
 function App() {
   return (
@@ -15,9 +14,13 @@ function App() {
           }
           return 1;
         })
-        .map((countryScore) => {
+        .map((countryScore, index) => {
           return (
-            <HighScoreTable name={countryScore.name} scores={countryScore.scores} />
+            <HighScoreTable
+              key={index}
+              name={countryScore.name}
+              scores={countryScore.scores}
+            />
           );
         })}
     </div>
