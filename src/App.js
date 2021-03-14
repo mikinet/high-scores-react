@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import allCountryScores from "./scores";
+import ScoreCard from "./HighScoreTable";
+import HighScoreTable from "./HighScoreTable";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="content">
+      <h1 className="title">High Scores Per Country</h1>
+      {allCountryScores
+        .sort((countryA, countryB) => {
+          countryA = countryA.name.toUpperCase();
+          countryB = countryB.name.toUpperCase();
+          if (countryA < countryB) {
+            return -1;
+          }
+          return 1;
+        })
+        .map((countryScore) => {
+          return (
+            <HighScoreTable name={countryScore.name} scores={countryScore.scores} />
+          );
+        })}
     </div>
   );
 }
-
 export default App;

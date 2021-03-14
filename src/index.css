@@ -1,3 +1,9 @@
+div,span,h1,h2{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,68 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root{
+  font-family:'Courier New', Courier, monospace;
+  width:80%;
+  margin:auto;
+  border:1px solid #ccc;
+  border-top:none;
+  border-bottom: none;
+}
+
+.content{
+  width:60%;
+  margin:auto;
+  border:1px solid blue;
+  padding:0.3em;
+  text-align: center;
+}
+
+h1.title{  
+  font-size: 2.5em;
+  color: rgb(141, 241, 241);
+  margin-bottom:0.3em;
+}
+
+.score-table{
+  width:100%;
+  border:8px solid greenyellow;
+  margin-top:0.3em;
+  padding:0.3em;
+}
+
+h2.label{
+  font-size: 1.8em;
+  color: rgb(141, 241, 241);
+  margin:0.3em;
+}
+
+.entries{
+  width:100%;
+  border:2px solid;
+  padding:0.3em;
+}
+
+.player-score{
+  padding:0.3em;
+  border-bottom:2px solid;
+  text-align: right;
+}
+
+.player-score span{
+  display:inline-block;
+  width:50%;
+}
+
+.player-score .name{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.player-score .score{
+  font-family:cursive;
+  font-size: 1.5em;
+  color:red;
 }
