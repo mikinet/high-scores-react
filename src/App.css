@@ -1,3 +1,75 @@
 .App {
+  border: 4px solid blue;
+  padding: 0.3em;
   text-align: center;
+}
+
+.sort-order-controller {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1rem;
+  color: rgb(141, 241, 241);
+}
+
+.sort-order-controller .button {
+  font-family: "Press Start 2P", cursive;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+div.worldwide-scores,
+div.country-scores {
+  margin-top: 3rem;
+}
+
+div.worldwide-scores .title {
+  margin-top: 2rem;
+}
+
+h1.title {
+  font-size: 2rem;
+  color: rgb(141, 241, 241);
+  margin-bottom: 0.3em;
+}
+
+.score-table {
+  width: 100%;
+  border: 1rem solid greenyellow;
+  margin-top: 1rem;
+  padding: 0.3em;
+}
+
+h2.label {
+  font-size: 1.6rem;
+  color: rgb(141, 241, 241);
+  margin: 0.7rem;
+}
+
+.entries {
+  width: 100%;
+  border: 2px solid;
+  padding: 0.3rem;
+}
+
+.player-score {
+  padding: 1rem;
+  border-bottom: 2px solid;
+  text-align: right;
+}
+
+.player-score .name,
+.player-score .score {
+  display: inline-block;
+  width: 50%;
+}
+
+.player-score .name {
+  font-size: 1rem;
+}
+
+.player-score .score {
+  font-size: 1.4rem;
+  color: red;
 }
